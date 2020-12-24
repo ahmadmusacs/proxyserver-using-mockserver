@@ -1,0 +1,16 @@
+plugins {
+    id 'application' 
+}
+
+repositories {
+    jcenter() 
+}
+
+dependencies {
+    testImplementation("org.mock-server:mockserver-client-java:5.11.2")
+}
+
+application {
+    mainClass = 'com.mycompany.app.App' 
+}
+

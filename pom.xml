@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <exec.mainClass>com.mycompany.app.App</exec.mainClass>
   </properties>
 
   <dependencies>
@@ -26,10 +27,15 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-     <groupId>org.mock-server</groupId>
-     <artifactId>mockserver-netty</artifactId>
-     <version>5.11.1</version>
-</dependency>
+      <groupId>org.mock-server</groupId>
+      <artifactId>mockserver-netty</artifactId>
+      <version>RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.mock-server</groupId>
+        <artifactId>mockserver-client-java</artifactId>
+        <version>RELEASE</version>
+    </dependency>
     
   </dependencies>
 
@@ -82,9 +88,8 @@
     <artifactId>mockserver-maven-plugin</artifactId>
     <version>5.11.1</version>
     <configuration>
-        <serverPort>1080</serverPort>
+        <serverPort>1081</serverPort>
         <logLevel>DEBUG</logLevel>
-        <initializationClass>org.mockserver.maven.ExampleInitializationClass</initializationClass>
     </configuration>
     <executions>
         <execution>
